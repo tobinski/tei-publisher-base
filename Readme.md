@@ -1,5 +1,5 @@
-# TEI publisher base image
-This image contains an exist-db with the tei-publisher librarys. You can use this image to build you an image with your own TEI-publisher app
+# TEI publisher lib image
+This image contains an exist-db with the tei-publisher library. You can use this image to build you an image with your own TEI-publisher app
 
 ## Build an image for your own app
 After you finished your tei-publisher app and wants to deploy it as a container you can just use this image as a base to build on.
@@ -37,6 +37,6 @@ COPY . .
 RUN ant
 
 # Build final container
-FROM tobinski/tei-publisher-base:${TEI_PUBLISHER_VERSION}
+FROM tobinski/tei-publisher-lib:${TEI_PUBLISHER_VERSION}
 COPY --from=your-app /tmp/your-app/build/*.xar /exist/autodeploy
 ``` 
